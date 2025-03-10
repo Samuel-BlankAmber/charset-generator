@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "charset-generator"
+version = "1.0.1"
+description = "A charset generator for CTFs"
+authors = [
+    { name = "BlankAmber" }
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+requires-python = ">=3.7"
+keywords = ["charset", "generator", "CTF"]
+dependencies = []
+
+[project.optional-dependencies]
+yielding = [
+    "keyboard>=0.13,<1"
+]
+ai = [
+    "openai>=1.65,<2"
+]
+
+[project.urls]
+Homepage = "https://github.com/Samuel-BlankAmber/charset-generator"
+Repository = "https://github.com/Samuel-BlankAmber/charset-generator"
+Issues = "https://github.com/Samuel-BlankAmber/charset-generator/issues"
+
+[tool.setuptools]
+packages = ["charset_generator"]
+
+[tool.setuptools.package-dir]
+charset_generator = "src/charset_generator"
